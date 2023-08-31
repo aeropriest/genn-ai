@@ -21,7 +21,7 @@ export default function GenerateSoundView() {
 
         try {
             // Make a POST request to the server's API endpoint to generate audio
-            const response = await fetch("/api/generate", {
+            const response = await fetch("/api/text2speech", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
-import {HfInference} from "@huggingface/inference"
+// import {HfInference} from "@huggingface/inference"
 
-const inference = new HfInference(process.env.HUGGING_FACE_API_KEY)
+// const inference = new HfInference(process.env.HUGGING_FACE_API_KEY)
 /*
 async function query(data) {
 	const response = await fetch(
@@ -28,11 +28,7 @@ export async function POST(
     const body = await req.json();
     console.log(body);
     const { inputs, model  } = body;
-    // await hf.textToSpeech({
-    //   model: 'espnet/kan-bayashi_ljspeech_vits',
-    //   inputs: 'Hello world!'
-    // })
-    // const speech = await inference.textToSpeech({
+    // const response = await inference.textToSpeech({
     //   model,
     //   inputs,
     // });

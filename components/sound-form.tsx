@@ -54,6 +54,7 @@ export function GenerateSoundForm({ handleGetAudio }: GenerateSoundFormProps) {
     // Function to handle form submission
     function onSubmit(data: z.infer<typeof FormSchema>) {
         setFormSubmitting(true);
+        alert("Form submission" + data.text);
 
         // Prepare the sound request object
         const soundRequest: CreateSoundRequest = {
