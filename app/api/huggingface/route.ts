@@ -16,14 +16,16 @@ export async function POST(
       "en-hi": "Helsinki-NLP/OPUS-mt-en-hi",
     };
 
-    // const translation = await inference.translation({
-    //   model: languageModels[language],
-    //   inputs: text as string,
-    // })
     const translation = await inference.translation({
-  model: 't5-base',
-  inputs: 'My name is Wolfgang and I live in Berlin'
-})
+      model: languageModels[language],
+      inputs: text as string,
+    });
+
+    // const audio = await inference.textToSpeech({
+    //   model: 'espnet/kan-bayashi_ljspeech_vits',
+    //   inputs: text as string
+    // })
+
     return NextResponse.json({translation, status: 200});
   } catch (error) {
     console.log('[CONVERSATION_ERROR]', error);
